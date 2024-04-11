@@ -2,6 +2,8 @@ package com.raywenderlich.android.lab1.screens
 
 import android.net.wifi.aware.AwareResources
 import androidx.annotation.StringRes
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.raywenderlich.android.lab1.R
@@ -53,7 +55,9 @@ fun ListScreen() {
 
 @Composable
 fun MyList() {
-    //TODO
+    LazyColumn {
+        items(items) { item -> ListItem(item) }
+    }
 }
 
 @Composable
