@@ -80,7 +80,10 @@ fun GridView(columnCount: Int) { val itemSize = items.size
 
 @Composable
 fun RowItem(rowItems: List<IconResource>) {
-    //TODO
+    Row {
+        for (element in rowItems)
+            GridIcon(element)
+    }
 }
 
 @Composable
